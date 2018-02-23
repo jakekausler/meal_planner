@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meals</title>
+    <base href="/">
+    <script src="lib/bower_components/jquery/dist/jquery.js"></script>
+    <script src="lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/bower_components/angular/angular.js"></script>
+    <script src="lib/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="lib/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="lib/bower_components/angular-material/angular-material.js"></script>
+    <link src="stylesheet" type="text/css" href="lib/bower_components/material-calendar/angular-mateial-calendar.css"></link>
+    <script src="lib/bower_components/material-calendar/angular-material-calendar.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.js"></script>
+    <script src="maincontroller.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/material-design-icons/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="lib/bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="lib/bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+</head>
+
+<body>
+    <div layout="column" flex layout-fill ng-app="meals" ng-controller="mainController as $ctrl">
+        <md-content layout="column" flex>
+            <div class="main" ui-view layout="column" flex>
+                <md-tabs layout-fill>
+                    <md-tab label="Calendar">
+                        <ng-include src="'calendar.html'">
+                    </md-tab>
+                    <md-tab label="Recipes">
+                        <div ng-include="'recipes.html'"></div>
+                    </md-tab>
+                    <md-tab label="Ingredients">
+                        <div ng-include="'ingredients.html'"></div>
+                    </md-tab>
+                    <md-tab label="Units">
+                        <div ng-include="'units.html'"></div>
+                    </md-tab>
+                </md-tabs>
+    </div>
+    </md-content>
+    <footer>
+    </footer>
+    </div>
+</body>
+
+</html>
